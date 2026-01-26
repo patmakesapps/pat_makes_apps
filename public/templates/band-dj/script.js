@@ -59,7 +59,8 @@ async function loadGalleryBatch() {
   let added = 0;
 
   while (added < BATCH_SIZE && missesInARow < MAX_MISSES) {
-    const label = `pic${nextPicIndex}.png`;
+    const label = `pic${nextPicIndex}.jpg`;
+
     const src = `./photos/${label}`;
 
     const { wrap, img } = createPhotoCard(src, label);

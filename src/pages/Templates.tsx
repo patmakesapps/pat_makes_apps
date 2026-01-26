@@ -18,6 +18,11 @@ export default function Templates() {
         <Link className="btn btn-primary" to="/templates/business-operations">
           Business Operations Demo
         </Link>
+
+        <Link className="btn btn-primary" to="/templates/band-dj">
+          Band / DJ Demo
+        </Link>
+
       </div>
     </main>
   );

@@ -6,6 +6,7 @@ import Pricing from './pages/Pricing';
 import BarberShopDemo from './pages/BarberShopDemo';
 import PersonalTrainerDemo from './pages/PersonalTrainerDemo';
 import BusinessOperationsDemo from './pages/BusinessOperationsDemo';
+import BandDjDemo from './pages/BandDjDemo';
 import TemplateShell from './layouts/TemplateShell';
 
 export default function App() {
@@ -75,6 +76,7 @@ export default function App() {
           <Route path="barber-shop" element={<BarberShopDemo />} />
           <Route path="personal-trainer" element={<PersonalTrainerDemo />} />
           <Route path="business-operations" element={<BusinessOperationsDemo />} />
+          <Route path="band-dj" element={<BandDjDemo />} />
         </Route>
 
         <Route path="/pricing" element={<Pricing />} />
