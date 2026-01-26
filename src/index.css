@@ -132,11 +132,21 @@ a { color: inherit; text-decoration: none; }
 
 .hero-subtitle {
   max-width: 62ch;
-  margin: 0 0 26px;
+  margin: 0 auto 26px;      /* center the block */
   color: var(--muted);
   font-size: 16px;
   line-height: 1.6;
+  text-align: center;        /* center the text */
+  white-space: nowrap;       /* no wrap on desktop */
 }
+
+/* On small screens, allow wrapping so it doesn't overflow */
+@media (max-width: 768px) {
+  .hero-subtitle {
+    white-space: normal;
+  }
+}
+
 
 .hero-actions {
   display: flex;
@@ -234,4 +244,144 @@ a { color: inherit; text-decoration: none; }
   height: 100%;
   border: 0;
   display: block;
+}
+
+/* === Hero: image-backed variant === */
+.hero.hero-with-bg {
+  position: relative;
+  min-height: 520px;
+  display: grid;
+  align-items: center;
+  border-radius: 16px;
+  overflow: hidden;
+  /* the image URL is set inline from Home.tsx via style backgroundImage */
+  background-size: cover;
+  background-position: center;
+  margin: 24px auto;
+  padding: 0; /* we’ll pad the inner .hero-content instead */
+}
+
+/* overlay to keep text readable on bright images */
+.hero-with-bg .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(120% 80% at 15% 20%, rgba(18,18,30,0.55) 0%, rgba(10,12,24,0.65) 40%, rgba(6,8,18,0.85) 100%),
+    linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.5));
+  backdrop-filter: blur(1px);
+}
+
+/* content sits above overlay */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 64px 0;
+}
+
+/* keep your existing hero typography/buttons */
+@media (max-width: 768px) {
+  .hero.hero-with-bg { min-height: 460px; }
+  .hero-content { padding: 48px 0; }
+}
+
+/* Full-bleed hero */
+.hero.hero-with-bg.hero-bleed {
+  position: relative;
+  min-height: 72vh;           /* fill space */
+  display: grid;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 16px 0 0;           /* near the topbar */
+  padding: 0;
+}
+
+/* Dark overlay, a bit lighter to reveal image */
+.hero-with-bg .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(120% 80% at 15% 20%, rgba(18,18,30,0.45) 0%, rgba(10,12,24,0.6) 40%, rgba(6,8,18,0.78) 100%),
+    linear-gradient(180deg, rgba(0,0,0,0.10), rgba(0,0,0,0.45));
+}
+
+/* Soft fade at the bottom so it blends into page */
+.hero-fade {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 140px;
+  background: linear-gradient(180deg, transparent, rgba(11,13,18,0.9) 45%, var(--bg) 100%);
+  pointer-events: none;
+}
+
+/* Frosted glass card that centers content and reduces empty space */
+.hero-card {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  max-width: 920px;
+  padding: 28px 28px 24px;
+  background: rgba(14, 18, 30, 0.42);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  backdrop-filter: blur(8px);
+  box-shadow: var(--shadow);
+}
+
+/* Center helpers + nowrap subtitle */
+.center { text-align: center; }
+.hero-actions.center { justify-content: center; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.nowrap { white-space: nowrap; }
+
+/* Tiny feature chips to use some space elegantly */
+.hero-features {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.hero-features li {
+  font-size: 13px;
+  color: var(--muted);
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
+}
+
+/* Category strip links */
+.hero-cats {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin: 18px auto 8px;
+}
+.hero-cats a {
+  font-size: 13px;
+  color: var(--text);
+  opacity: 0.9;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  transition: transform 120ms ease, background 120ms ease, opacity 120ms ease;
+}
+.hero-cats a:hover { transform: translateY(-1px); background: rgba(255,255,255,0.08); }
+
+/* Title/subtitle centering */
+.hero-title.center { margin: 0 0 14px; }
+.hero-subtitle.center { margin: 0 auto 22px; }
+
+@media (max-width: 900px) {
+  .nowrap { white-space: normal; }   /* let it wrap on mobile */
+  .hero-card { padding: 24px 18px; }
+  .hero.hero-with-bg.hero-bleed { min-height: 64vh; }
 }

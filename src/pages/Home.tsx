@@ -1,22 +1,30 @@
+import { Link } from "react-router-dom";
+
 export default function Home() {
   return (
-    <main className="container">
-      <section className="hero">
-        <p className="pill">Demo Platform</p>
+    <section
+      className="hero hero-with-bg hero-bleed"
+      style={{ backgroundImage: "url(/hero_image.png)" }}
+      aria-label="Futuristic gallery of website templates"
+    >
+      <div className="hero-overlay" />
+      <div className="container">
+        <div className="hero-card">
+          <h1 className="hero-title center nowrap">
+           Modern websites for your business.
+          </h1>
 
-        <h1 className="hero-title">
-          Modern website templates, ready to demo.
-        </h1>
+          <p className="hero-subtitle nowrap center">
+            Browse templates, click around live previews, and ship client-ready sites faster.
+          </p>
 
-        <p className="hero-subtitle">
-          Browse templates, click around live previews, and ship client-ready sites faster.
-        </p>
-
-        <div className="hero-actions">
-          <a className="btn btn-primary" href="/templates">View Templates</a>
-          <a className="btn btn-ghost" href="/pricing">Pricing</a>
+          <div className="hero-actions center">
+            <Link className="btn btn-primary" to="/templates">View Templates</Link>
+            <Link className="btn btn-ghost" to="/pricing">Pricing</Link>
+          </div>
         </div>
-      </section>
-    </main>
+      </div>
+      <div className="hero-fade" />
+    </section>
   );
 }
