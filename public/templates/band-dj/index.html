@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Band / DJ Template</title>
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__name">NEON NIGHTS</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#music">Music</a>
+        <a href="#shows">Shows</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobileNav" id="mobileNav">
+      <a href="#music">Music</a>
+      <a href="#shows">Shows</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <p class="pill">Band / DJ • Electronic • Live</p>
+        <h1>New single out now.</h1>
+        <p class="subtext">
+          A clean, modern template for bands and DJs. Drop in your assets, swap links, and you’re live.
+        </p>
+
+        <div class="ctaRow">
+          <a class="btn btn--primary" href="#music">Listen now</a>
+          <a class="btn btn--ghost" href="#shows">See shows</a>
+        </div>
+
+        <div class="socialRow" aria-label="Social links">
+          <a class="iconLink" href="#" target="_blank" rel="noreferrer" aria-label="Instagram">IG</a>
+          <a class="iconLink" href="#" target="_blank" rel="noreferrer" aria-label="TikTok">TT</a>
+          <a class="iconLink" href="#" target="_blank" rel="noreferrer" aria-label="YouTube">YT</a>
+          <a class="iconLink" href="#" target="_blank" rel="noreferrer" aria-label="X">X</a>
+          <a class="iconLink" href="#" target="_blank" rel="noreferrer" aria-label="SoundCloud">SC</a>
+        </div>
+      </div>
+
+      <div class="hero__media">
+        <img src="./photos/hero.png" alt="Artist hero" class="heroImg" />
+        <div class="hero__badge">
+          <span class="badgeTitle">Next Show</span>
+          <span class="badgeMeta">Fri • 10PM • The Venue</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Music / Streaming -->
+  <section class="section" id="music">
+    <div class="container">
+      <div class="sectionHead">
+        <h2>Music</h2>
+        <p>Links below are placeholders — swap them with your real streaming URLs.</p>
+      </div>
+
+      <div class="cardsGrid">
+        <article class="card">
+          <h3>Featured Release</h3>
+          <p class="muted">“Midnight Signal” • Single</p>
+
+          <div class="streamGrid" aria-label="Streaming links">
+            <a class="streamLink" href="#" target="_blank" rel="noreferrer">Spotify</a>
+            <a class="streamLink" href="#" target="_blank" rel="noreferrer">Apple Music</a>
+            <a class="streamLink" href="#" target="_blank" rel="noreferrer">YouTube Music</a>
+            <a class="streamLink" href="#" target="_blank" rel="noreferrer">SoundCloud</a>
+            <a class="streamLink" href="#" target="_blank" rel="noreferrer">Bandcamp</a>
+            <a class="streamLink" href="#" target="_blank" rel="noreferrer">Amazon Music</a>
+          </div>
+
+          <div class="miniNote">
+            Tip: Replace the title + links, or swap this whole card with an embedded player later.
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Bio</h3>
+          <p class="muted">
+            Short, punchy intro goes here. Describe your sound, highlight recent releases,
+            and mention notable venues/festivals.
+          </p>
+
+          <ul class="bullets">
+            <li>Genre tags: House • Techno • Pop • Rock</li>
+            <li>Location: Your City</li>
+            <li>For bookings: booking@yourdomain.com</li>
+          </ul>
+
+          <a class="btn btn--soft" href="#contact">Booking / Press kit</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shows -->
+  <section class="section section--alt" id="shows">
+    <div class="container">
+      <div class="sectionHead">
+        <h2>Upcoming Shows</h2>
+        <p>Add dates manually or wire this to a database later.</p>
+      </div>
+
+      <div class="shows">
+        <div class="showRow">
+          <div class="showDate">
+            <span class="month">FEB</span>
+            <span class="day">14</span>
+          </div>
+          <div class="showInfo">
+            <div class="showTitle">The Venue — Downtown</div>
+            <div class="showMeta muted">Doors 9PM • Set 10PM • 21+</div>
+          </div>
+          <a class="btn btn--ghost btn--sm" href="#" target="_blank" rel="noreferrer">Tickets</a>
+        </div>
+
+        <div class="showRow">
+          <div class="showDate">
+            <span class="month">MAR</span>
+            <span class="day">02</span>
+          </div>
+          <div class="showInfo">
+            <div class="showTitle">Festival Name</div>
+            <div class="showMeta muted">Main Stage • 6:30PM</div>
+          </div>
+          <a class="btn btn--ghost btn--sm" href="#" target="_blank" rel="noreferrer">Details</a>
+        </div>
+
+        <div class="showRow">
+          <div class="showDate">
+            <span class="month">APR</span>
+            <span class="day">19</span>
+          </div>
+          <div class="showInfo">
+            <div class="showTitle">Club Night — City</div>
+            <div class="showMeta muted">Support: Guest Artist</div>
+          </div>
+          <a class="btn btn--ghost btn--sm" href="#" target="_blank" rel="noreferrer">RSVP</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="sectionHead sectionHead--row">
+        <div>
+          <h2>Gallery</h2>
+          <p>Auto-loads photos from <code>photos/pic1.png</code>, <code>pic2.png</code>, etc.</p>
+        </div>
+
+        <div class="galleryControls">
+          <button class="btn btn--soft btn--sm" id="loadMoreBtn" type="button">Load more</button>
+        </div>
+      </div>
+
+      <div class="galleryGrid" id="galleryGrid" aria-label="Photo gallery">
+        <!-- JS injects images here -->
+        <noscript>
+          <p class="muted">Enable JavaScript to view the gallery.</p>
+        </noscript>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section section--alt" id="contact">
+    <div class="container">
+      <div class="sectionHead">
+        <h2>Contact</h2>
+        <p>Drop your booking email + a simple message form.</p>
+      </div>
+
+      <div class="contactGrid">
+        <div class="card">
+          <h3>Booking</h3>
+          <p class="muted">
+            Email: <a href="mailto:booking@yourdomain.com">booking@yourdomain.com</a><br />
+            Press: <a href="mailto:press@yourdomain.com">press@yourdomain.com</a>
+          </p>
+
+          <div class="socialRow">
+            <a class="chip" href="#" target="_blank" rel="noreferrer">Instagram</a>
+            <a class="chip" href="#" target="_blank" rel="noreferrer">TikTok</a>
+            <a class="chip" href="#" target="_blank" rel="noreferrer">YouTube</a>
+            <a class="chip" href="#" target="_blank" rel="noreferrer">Spotify</a>
+          </div>
+        </div>
+
+        <form class="card form" id="contactForm">
+          <div class="formRow">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="you@email.com" required />
+            </label>
+          </div>
+
+          <label>
+            Message
+            <textarea name="message" rows="5" placeholder="Tell us about your event..." required></textarea>
+          </label>
+
+          <div class="formActions">
+            <button class="btn btn--primary" type="submit">Send message</button>
+            <span class="muted" id="formStatus" role="status" aria-live="polite"></span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="muted">© <span id="year"></span> NEON NIGHTS — All rights reserved.</p>
+      <a class="muted" href="#top" id="backToTop">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
