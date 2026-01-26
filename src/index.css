@@ -1,0 +1,222 @@
+:root {
+  --bg: #0b0d12;
+  --panel: #0f1420;
+  --text: #e9eefc;
+  --muted: #a7b0c6;
+  --border: rgba(255, 255, 255, 0.08);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(1200px 700px at 20% 10%, rgba(122, 92, 255, 0.18), transparent 60%),
+    radial-gradient(900px 600px at 80% 20%, rgba(41, 209, 255, 0.12), transparent 55%),
+    var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+  width: min(1100px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(11, 13, 18, 0.72);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.topbar-inner {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.brand-name {
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+/* The square (replaces the old gradient square) */
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.04);
+  transition: transform 120ms ease, opacity 120ms ease;
+}
+
+
+.brand-mark:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+/* Make the IG image fill the square */
+.brand-mark-img {
+  width: 200%;
+  height: 200%;
+  display: block;
+  transform: translateY(-4px);
+  object-fit: contain;
+}
+
+.nav {
+  display: flex;
+  gap: 6px;
+}
+
+.nav-link {
+  padding: 10px 12px;
+  border-radius: 12px;
+  color: var(--muted);
+  transition: background 120ms ease, color 120ms ease;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+}
+
+.nav-link.active {
+  background: rgba(255, 255, 255, 0.10);
+  color: var(--text);
+}
+
+.hero {
+  padding: 72px 0 48px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0 0 18px;
+}
+
+.hero-title {
+  font-size: clamp(34px, 5vw, 56px);
+  line-height: 1.04;
+  margin: 0 0 14px;
+  letter-spacing: -0.03em;
+}
+
+.hero-subtitle {
+  max-width: 62ch;
+  margin: 0 0 26px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 120ms ease, background 120ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.btn-primary {
+  border-color: transparent;
+  background: linear-gradient(135deg, rgba(122, 92, 255, 1), rgba(41, 209, 255, 1));
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, rgba(122, 92, 255, 0.92), rgba(41, 209, 255, 0.92));
+}
+
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.template-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+  background: rgba(7, 10, 18, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.template-back {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.template-back:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.template-topbar-title {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.template-shell {
+  min-height: 100vh;
+}

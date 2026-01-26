@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barber Shop</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo-wrap">
+        <img src="./photos/barbershoplogo.png" alt="Barber Shop Logo" class="nav-logo" />
+        <span class="brand-name">Barber Shop</span>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+      <div class="hero-left">
+        <h1>Sharp Cuts. Clean Fades. Good Vibes.</h1>
+
+        <p>
+          A modern neighborhood barber shop delivering classic cuts, fresh fades,
+          and beard work with attention to every detail. Walk in or book ahead —
+          your chair is waiting.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn primary-btn" id="cta-book">Book an Appointment</a>
+          <a href="#gallery" class="btn ghost-btn">View Gallery</a>
+        </div>
+
+       <div class="hero-tags" aria-label="Popular services">
+  <span class="hero-tags-label">Popular:</span>
+  <div class="hero-tags-row">
+    <span class="tag-chip">Skin Fades</span>
+    <span class="tag-chip">Beard Trims</span>
+    <span class="tag-chip">Hot Towel Shaves</span>
+  </div>
+</div>
+
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-card">
+          <h2>Today’s Hours</h2>
+          <p>Mon – Sat · 9:00am – 8:00pm</p>
+          <p>Sunday · 11:00am – 4:00pm</p>
+          <div class="hero-line"></div>
+          <p class="hero-small">
+            Call or DM to reserve your spot, or swing by and we’ll get you in as
+            soon as possible.
+          </p>
+        </div>
+
+        <div class="hero-photo-stack" aria-label="Featured photos">
+          <div class="hero-photo hero-photo-1">
+            <img src="./photos/pic1.jpg" alt="Fresh haircut close-up" />
+          </div>
+          <div class="hero-photo hero-photo-2">
+            <img src="./photos/pic2.jpg" alt="Barber working on a fade" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="container about-grid">
+      <div>
+        <h2>About the Shop</h2>
+        <p>
+          Our barbers blend old-school craft with modern style. From simple
+          clean-ups to full transformations, every cut is tailored to your look
+          and lifestyle.
+        </p>
+        <p>
+          We keep the vibe relaxed: good music, real conversation, and a focus
+          on making sure you leave feeling confident. No rush, no fuss — just
+          quality work.
+        </p>
+      </div>
+
+      <div class="about-highlights">
+        <div class="about-card">
+          <h3>Experienced Barbers</h3>
+          <p>Years behind the chair perfecting fades, tapers, and beard detail.</p>
+        </div>
+        <div class="about-card">
+          <h3>Modern & Clean</h3>
+          <p>A fresh, minimal space with a cozy, welcoming feel.</p>
+        </div>
+        <div class="about-card">
+          <h3>Walk-ins Welcome</h3>
+          <p>Book ahead or stop in — we’ll do our best to fit you in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <div class="section-header">
+        <h2>Photo Gallery</h2>
+        <p>Real cuts, real clients. Tap any photo to view it larger.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <figure class="gallery-item"><img src="./photos/pic1.jpg" alt="Barber shop photo 1" loading="lazy" /></figure>
+        <figure class="gallery-item"><img src="./photos/pic2.jpg" alt="Barber shop photo 2" loading="lazy" /></figure>
+        <figure class="gallery-item"><img src="./photos/pic3.jpg" alt="Barber shop photo 3" loading="lazy" /></figure>
+        <figure class="gallery-item"><img src="./photos/pic4.jpg" alt="Barber shop photo 4" loading="lazy" /></figure>
+        <figure class="gallery-item"><img src="./photos/pic5.jpg" alt="Barber shop photo 5" loading="lazy" /></figure>
+        <figure class="gallery-item"><img src="./photos/pic6.jpg" alt="Barber shop photo 6" loading="lazy" /></figure>
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+      <button class="lightbox-close" aria-label="Close image">&times;</button>
+      <img src="" alt="Expanded view" class="lightbox-img" />
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="container contact-grid">
+      <div>
+        <h2>Visit & Contact</h2>
+        <p>
+          Use this area to plug in the real address, phone number, and booking
+          links for the shop.
+        </p>
+        <ul class="contact-list">
+          <li><strong>Address:</strong> 123 Fade Street, Suite 1, Your City</li>
+          <li><strong>Phone:</strong> (555) 123-4567</li>
+          <li><strong>Instagram:</strong> @yourbarbershop</li>
+        </ul>
+      </div>
+
+      <div class="contact-card">
+        <h3>Request an Appointment</h3>
+        <form class="contact-form">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Your name" autocomplete="name" />
+          </div>
+
+          <div class="field">
+            <label for="service">Preferred Service</label>
+            <input id="service" type="text" placeholder="Cut, fade, beard, etc." />
+          </div>
+
+          <div class="field-inline">
+            <div class="field">
+              <label for="date">Date</label>
+              <input id="date" type="date" />
+            </div>
+            <div class="field">
+              <label for="time">Time</label>
+              <input id="time" type="time" />
+            </div>
+          </div>
+
+          <button type="submit" class="btn primary-btn full-width">
+            Send Request (Demo Only)
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Barber Shop. All rights reserved.</p>
+      <p class="footer-small">Website mockup built for demo purposes.</p>
+    </div>
+  </footer>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>

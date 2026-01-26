@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PulseOps | Business Intelligence Template</title>
+    <meta
+      name="description"
+      content="Modular business dashboard template ready for hospitals, banks, clinics, and property firms."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="shell-header">
+        <div>
+          <span class="brand-mark">PulseOps</span>
+          <span class="brand-sub">Operational Intelligence</span>
+        </div>
+        <nav aria-label="Primary">
+          <a href="#overview">Overview</a>
+          <a href="#data">Reports</a>
+          <a href="#wizard">Wizard</a>
+        </nav>
+        <button class="btn ghost" type="button">Launch demo</button>
+      </header>
+
+      <main class="main">
+        <section id="overview" class="panel snapshot">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Live snapshot</p>
+              <h1>Modern data watch for any business line</h1>
+            </div>
+            <p class="panel-hint">Snapshot data is mapped from <code>dummydata.config</code> for route <code>/api/business/snapshot</code>.</p>
+          </div>
+
+          <div class="snapshot-grid">
+            <div class="chart-card">
+              <div class="chart-header">
+                <div>
+                  <h2>Demand pulse</h2>
+                  <p>Trailing 30-day trend</p>
+                </div>
+                <span class="chart-tag">Live</span>
+              </div>
+              <div class="sparkline" aria-hidden="true">
+                <svg id="sparkline"></svg>
+                <div class="sparkline-change" id="sparklineChange"></div>
+              </div>
+              <ul class="sparkline-list" id="sparklineList"></ul>
+            </div>
+            <div class="metric-stack" id="metricStack"></div>
+          </div>
+        </section>
+
+        <section id="data" class="panel data-panel">
+          <div class="panel-head">
+            <div>
+              <h2>Reusable data tables</h2>
+              <p>Filters, search, and table markup derive from shared config &amp; reusable template. Data is delivered through <code>/api/business/data-table</code>.</p>
+            </div>
+            <div class="panel-actions">
+              <button class="btn ghost tiny" type="button">Export snapshot</button>
+              <button class="btn ghost tiny" type="button">Refresh cache</button>
+            </div>
+          </div>
+
+          <div class="panel-controls">
+            <label class="control">
+              <span>Search</span>
+              <input id="globalSearch" type="search" placeholder="Search by client, region, focus" />
+            </label>
+            <div class="filter-chips" role="group" aria-label="Status filters"></div>
+            <div class="dropdown" data-dropdown>
+              <button class="dropdown-toggle" type="button" data-dropdown-button aria-haspopup="listbox">
+                <span data-dropdown-label>Industry focus</span>
+                <span aria-hidden="true" class="dropdown-chevron">▾</span>
+              </button>
+              <div class="dropdown-menu" data-dropdown-menu role="listbox"></div>
+            </div>
+          </div>
+
+          <div id="tablesContainer"></div>
+        </section>
+
+        <section id="wizard" class="panel wizard-panel">
+          <div class="panel-head">
+            <div>
+              <h2>Reusable wizard form</h2>
+              <p>Guided intake from <code>/api/business/wizard</code> ensures each client gets a tailored plan.</p>
+            </div>
+            <p class="panel-hint">Selections also sync to <code>/api/business/options</code>.</p>
+          </div>
+
+          <div class="wizard">
+            <div class="wizard-steps" id="wizardSteps"></div>
+            <div class="wizard-footer">
+              <button class="btn ghost tiny" type="button" id="wizardBack">Back</button>
+              <button class="btn" type="button" id="wizardNext">Next step</button>
+            </div>
+            <p class="muted small" id="wizardFeedback"></p>
+          </div>
+        </section>
+
+        <section class="panel route-panel" aria-label="Backend routes">
+          <h3>Placeholder backend routes</h3>
+          <ul id="routeList"></ul>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; <span id="year"></span> PulseOps template — ready for hospitals, banks, dental, and real estate teams.</p>
+        <p class="muted small">Demo pulls from <code>dummydata.config</code> so teams can swap in real APIs easily.</p>
+      </footer>
+    </div>
+
+    <template id="data-table-template">
+      <article class="board">
+        <div class="board-head">
+          <div>
+            <h3 class="board-title"></h3>
+            <p class="board-subtitle"></p>
+          </div>
+          <span class="board-tag" data-board-tag></span>
+        </div>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Client</th>
+                <th>Region</th>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </article>
+    </template>
+
+    <template id="wizard-step-template">
+      <section class="wizard-step">
+        <div class="wizard-step-head">
+          <h3 class="wizard-step-title"></h3>
+          <p class="muted wizard-step-description"></p>
+        </div>
+        <div class="wizard-fields"></div>
+      </section>
+    </template>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
