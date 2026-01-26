@@ -11,7 +11,7 @@ export default function Home() {
       <div className="container">
         <div className="hero-card">
           <h1 className="hero-title center nowrap">
-           Modern websites for your business.
+            Modern websites for your business.
           </h1>
 
           <p className="hero-subtitle nowrap center">

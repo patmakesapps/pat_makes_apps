@@ -27,6 +27,7 @@ a { color: inherit; text-decoration: none; }
   margin: 0 auto;
 }
 
+/* ───────── Topbar ───────── */
 .topbar {
   position: sticky;
   top: 0;
@@ -35,14 +36,12 @@ a { color: inherit; text-decoration: none; }
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
-
 .topbar-inner {
   height: 64px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .brand {
   display: flex;
   align-items: center;
@@ -50,203 +49,103 @@ a { color: inherit; text-decoration: none; }
   font-weight: 700;
   letter-spacing: 0.2px;
 }
-
-.brand-name {
-  font-size: 14px;
-  opacity: 0.95;
-}
-
-/* The square (replaces the old gradient square) */
+.brand-name { font-size: 14px; opacity: 0.95; }
 .brand-mark {
-  width: 34px;
-  height: 34px;
-  border-radius: 12px;
-  overflow: hidden;
+  width: 34px; height: 34px;
+  border-radius: 12px; overflow: hidden;
   box-shadow: var(--shadow);
-  display: grid;
-  place-items: center;
+  display: grid; place-items: center;
   background: rgba(255, 255, 255, 0.04);
   transition: transform 120ms ease, opacity 120ms ease;
 }
-
-
-.brand-mark:hover {
-  transform: translateY(-1px);
-  opacity: 0.95;
-}
-
-/* Make the IG image fill the square */
+.brand-mark:hover { transform: translateY(-1px); opacity: 0.95; }
 .brand-mark-img {
-  width: 200%;
-  height: 200%;
-  display: block;
-  transform: translateY(-4px);
+  width: 200%; height: 200%;
+  display: block; transform: translateY(-4px);
   object-fit: contain;
 }
-
-.nav {
-  display: flex;
-  gap: 6px;
-}
-
+.nav { display: flex; gap: 6px; }
 .nav-link {
-  padding: 10px 12px;
-  border-radius: 12px;
+  padding: 10px 12px; border-radius: 12px;
   color: var(--muted);
   transition: background 120ms ease, color 120ms ease;
 }
+.nav-link:hover { background: rgba(255,255,255,0.06); color: var(--text); }
+.nav-link.active { background: rgba(255,255,255,0.10); color: var(--text); }
 
-.nav-link:hover {
-  background: rgba(255, 255, 255, 0.06);
-  color: var(--text);
-}
-
-.nav-link.active {
-  background: rgba(255, 255, 255, 0.10);
-  color: var(--text);
-}
-
-.hero {
-  padding: 72px 0 48px;
-}
-
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--muted);
-  font-size: 13px;
-  margin: 0 0 18px;
-}
-
-.hero-title {
-  font-size: clamp(34px, 5vw, 56px);
-  line-height: 1.04;
-  margin: 0 0 14px;
-  letter-spacing: -0.03em;
-}
-
-.hero-subtitle {
-  max-width: 62ch;
-  margin: 0 auto 26px;      /* center the block */
-  color: var(--muted);
-  font-size: 16px;
-  line-height: 1.6;
-  text-align: center;        /* center the text */
-  white-space: nowrap;       /* no wrap on desktop */
-}
-
-/* On small screens, allow wrapping so it doesn't overflow */
-@media (max-width: 768px) {
-  .hero-subtitle {
-    white-space: normal;
-  }
-}
-
-
-.hero-actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
+/* ───────── Buttons ───────── */
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 44px;
-  padding: 0 16px;
-  border-radius: 14px;
-  border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--text);
-  font-weight: 600;
-  cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center;
+  height: 44px; padding: 0 16px;
+  border-radius: 14px; border: 1px solid var(--border);
+  background: rgba(255,255,255,0.04); color: var(--text);
+  font-weight: 600; cursor: pointer;
   transition: transform 120ms ease, background 120ms ease;
 }
-
-.btn:hover {
-  transform: translateY(-1px);
-  background: rgba(255, 255, 255, 0.07);
-}
-
+.btn:hover { transform: translateY(-1px); background: rgba(255,255,255,0.07); }
 .btn-primary {
   border-color: transparent;
   background: linear-gradient(135deg, rgba(122, 92, 255, 1), rgba(41, 209, 255, 1));
 }
-
 .btn-primary:hover {
   background: linear-gradient(135deg, rgba(122, 92, 255, 0.92), rgba(41, 209, 255, 0.92));
 }
+.btn-ghost { background: rgba(255,255,255,0.03); }
 
-.btn-ghost {
-  background: rgba(255, 255, 255, 0.03);
-}
-
+/* ───────── Template demo shell (iframe page) ───────── */
 .template-topbar {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 0 16px;
-  background: rgba(7, 10, 18, 0.92);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: sticky; top: 0; z-index: 50; height: 64px;
+  display: flex; align-items: center; gap: 12px; padding: 0 16px;
+  background: rgba(7,10,18,0.92); backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
-
 .template-back {
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  background: rgba(255, 255, 255, 0.06);
-  color: #fff;
-  font-size: 20px;
-  line-height: 1;
-  cursor: pointer;
-  display: grid;
-  place-items: center;
+  width: 40px; height: 40px; border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.06); color: #fff;
+  font-size: 20px; line-height: 1; cursor: pointer; display: grid; place-items: center;
+}
+.template-back:hover { border-color: rgba(255,255,255,0.22); background: rgba(255,255,255,0.10); }
+.template-topbar-title { color: rgba(255,255,255,0.9); font-size: 0.95rem; font-weight: 600; letter-spacing: 0.02em; }
+.template-shell { height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+.template-demo { flex: 1; min-height: 0; }
+.template-demo iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+/* ───────── Hero (image-backed) ───────── */
+.hero { padding: 72px 0 48px; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.center { text-align: center; }
+.hero-actions.center { justify-content: center; }
+.nowrap { white-space: nowrap; }
+
+/* Title sizing tuned to fit inside the card */
+.hero-title {
+  font-size: clamp(34px, 4.2vw, 56px);
+  line-height: 1.04;
+  margin: 0 0 14px;
+  letter-spacing: -0.03em;
+}
+/* One line on desktop, no ellipsis */
+.hero-title.nowrap {
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: clip;
+  line-height: 1.05;
 }
 
-.template-back:hover {
-  border-color: rgba(255, 255, 255, 0.22);
-  background: rgba(255, 255, 255, 0.10);
+.hero-subtitle {
+  max-width: 62ch;
+  margin: 0 auto 26px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .hero-subtitle { white-space: normal; }
 }
 
-.template-topbar-title {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
-
-.template-shell {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.template-demo {
-  flex: 1;
-  min-height: 0;
-}
-
-.template-demo iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
-}
-
-/* === Hero: image-backed variant === */
 .hero.hero-with-bg {
   position: relative;
   min-height: 520px;
@@ -254,134 +153,47 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   border-radius: 16px;
   overflow: hidden;
-  /* the image URL is set inline from Home.tsx via style backgroundImage */
   background-size: cover;
   background-position: center;
-  margin: 24px auto;
-  padding: 0; /* we’ll pad the inner .hero-content instead */
-}
-
-/* overlay to keep text readable on bright images */
-.hero-with-bg .hero-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(120% 80% at 15% 20%, rgba(18,18,30,0.55) 0%, rgba(10,12,24,0.65) 40%, rgba(6,8,18,0.85) 100%),
-    linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.5));
-  backdrop-filter: blur(1px);
-}
-
-/* content sits above overlay */
-.hero-content {
-  position: relative;
-  z-index: 1;
-  padding: 64px 0;
-}
-
-/* keep your existing hero typography/buttons */
-@media (max-width: 768px) {
-  .hero.hero-with-bg { min-height: 460px; }
-  .hero-content { padding: 48px 0; }
-}
-
-/* Full-bleed hero */
-.hero.hero-with-bg.hero-bleed {
-  position: relative;
-  min-height: 72vh;           /* fill space */
-  display: grid;
-  align-items: center;
-  background-size: cover;
-  background-position: center;
-  border-radius: 16px;
-  overflow: hidden;
-  margin: 16px 0 0;           /* near the topbar */
+  margin: 16px 0 0;
   padding: 0;
 }
+.hero.hero-with-bg.hero-bleed { min-height: 72vh; }
 
-/* Dark overlay, a bit lighter to reveal image */
 .hero-with-bg .hero-overlay {
-  position: absolute;
-  inset: 0;
+  position: absolute; inset: 0;
   background:
     radial-gradient(120% 80% at 15% 20%, rgba(18,18,30,0.45) 0%, rgba(10,12,24,0.6) 40%, rgba(6,8,18,0.78) 100%),
     linear-gradient(180deg, rgba(0,0,0,0.10), rgba(0,0,0,0.45));
 }
-
-/* Soft fade at the bottom so it blends into page */
 .hero-fade {
-  position: absolute;
-  inset: auto 0 0 0;
-  height: 140px;
-  background: linear-gradient(180deg, transparent, rgba(11,13,18,0.9) 45%, var(--bg) 100%);
+  position: absolute; inset: auto 0 0 0;
+  height: 360px;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0) 0%,
+    rgba(6,8,18,0.28) 25%,
+    rgba(6,8,18,0.56) 55%,
+    var(--bg) 100%
+  );
   pointer-events: none;
 }
 
-/* Frosted glass card that centers content and reduces empty space */
+/* Glass card: keeps content inside and scales safely */
 .hero-card {
   position: relative;
   z-index: 1;
   margin: 0 auto;
-  max-width: 920px;
-  padding: 28px 28px 24px;
-  background: rgba(14, 18, 30, 0.42);
+  width: clamp(320px, 92vw, 1100px);
+  padding: 28px clamp(22px, 4vw, 36px) 24px;
+  background: rgba(14,18,30,0.38);
   border: 1px solid var(--border);
   border-radius: 18px;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
   box-shadow: var(--shadow);
+  overflow: hidden;
 }
-
-/* Center helpers + nowrap subtitle */
-.center { text-align: center; }
-.hero-actions.center { justify-content: center; }
-.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-.nowrap { white-space: nowrap; }
-
-/* Tiny feature chips to use some space elegantly */
-.hero-features {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin: 14px 0 0;
-  padding: 0;
-  list-style: none;
-}
-.hero-features li {
-  font-size: 13px;
-  color: var(--muted);
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid var(--border);
-}
-
-/* Category strip links */
-.hero-cats {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: center;
-  margin: 18px auto 8px;
-}
-.hero-cats a {
-  font-size: 13px;
-  color: var(--text);
-  opacity: 0.9;
-  padding: 8px 12px;
-  border-radius: 10px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid var(--border);
-  transition: transform 120ms ease, background 120ms ease, opacity 120ms ease;
-}
-.hero-cats a:hover { transform: translateY(-1px); background: rgba(255,255,255,0.08); }
-
-/* Title/subtitle centering */
-.hero-title.center { margin: 0 0 14px; }
-.hero-subtitle.center { margin: 0 auto 22px; }
 
 @media (max-width: 900px) {
-  .nowrap { white-space: normal; }   /* let it wrap on mobile */
-  .hero-card { padding: 24px 18px; }
-  .hero.hero-with-bg.hero-bleed { min-height: 64vh; }
+  .hero-title.nowrap { white-space: normal; } /* allow wrap on small devices */
 }
