@@ -19,7 +19,7 @@ export default function Home() {
             <p className="hero-eyebrow">Pat Makes Apps</p>
             <h1 className="hero-title">Modern websites that feel custom and launch fast.</h1>
             <p className="hero-lede">
-              We pair curated templates with a human build process so your next site lands
+              We pair curated templates with a professional build process so your next site lands
               polished without a long production cycle.
             </p>
 

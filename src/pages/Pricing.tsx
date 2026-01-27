@@ -62,7 +62,7 @@ export default function Pricing() {
             <li>Hosting for basic sites</li>
             <li>DNS setup assistance</li>
             <li>Basic SEO setup</li>
-            <li>You purchase the domain</li>
+            <li>You purchase + own the domain!</li>
           </ul>
 
           <div className="price-meta">
