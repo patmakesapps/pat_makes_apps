@@ -9,6 +9,7 @@ import BarberShopDemo from './pages/BarberShopDemo';
 import PersonalTrainerDemo from './pages/PersonalTrainerDemo';
 import BusinessOperationsDemo from './pages/BusinessOperationsDemo';
 import BandDjDemo from './pages/BandDjDemo';
+import TemplateShell from './layouts/TemplateShell';
 
 export default function App() {
   const { pathname } = useLocation();
@@ -84,16 +85,18 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
 
         {/* template demos */}
-        <Route path="/templates/barber-shop" element={<BarberShopDemo />} />
-        <Route
-          path="/templates/personal-trainer"
-          element={<PersonalTrainerDemo />}
-        />
-        <Route
-          path="/templates/business-operations"
-          element={<BusinessOperationsDemo />}
-        />
-        <Route path="/templates/band-dj" element={<BandDjDemo />} />
+        <Route element={<TemplateShell />}>
+          <Route path="/templates/barber-shop" element={<BarberShopDemo />} />
+          <Route
+            path="/templates/personal-trainer"
+            element={<PersonalTrainerDemo />}
+          />
+          <Route
+            path="/templates/business-operations"
+            element={<BusinessOperationsDemo />}
+          />
+          <Route path="/templates/band-dj" element={<BandDjDemo />} />
+        </Route>
       </Routes>
     </div>
   );
