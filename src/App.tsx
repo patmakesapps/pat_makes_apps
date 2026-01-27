@@ -3,11 +3,12 @@ import { NavLink, Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import Templates from './pages/Templates';
 import Pricing from './pages/Pricing';
+import Contact from './pages/Contact';
+
 import BarberShopDemo from './pages/BarberShopDemo';
 import PersonalTrainerDemo from './pages/PersonalTrainerDemo';
 import BusinessOperationsDemo from './pages/BusinessOperationsDemo';
 import BandDjDemo from './pages/BandDjDemo';
-import TemplateShell from './layouts/TemplateShell';
 
 export default function App() {
   const { pathname } = useLocation();
@@ -62,6 +63,15 @@ export default function App() {
               >
                 Pricing
               </NavLink>
+
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? 'active' : ''}`
+                }
+              >
+                Contact
+              </NavLink>
             </nav>
           </div>
         </header>
@@ -70,16 +80,20 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/templates" element={<Templates />} />
-
-        {/* All template demos live under this shell */}
-        <Route path="/templates" element={<TemplateShell />}>
-          <Route path="barber-shop" element={<BarberShopDemo />} />
-          <Route path="personal-trainer" element={<PersonalTrainerDemo />} />
-          <Route path="business-operations" element={<BusinessOperationsDemo />} />
-          <Route path="band-dj" element={<BandDjDemo />} />
-        </Route>
-
         <Route path="/pricing" element={<Pricing />} />
+        <Route path="/contact" element={<Contact />} />
+
+        {/* template demos */}
+        <Route path="/templates/barber-shop" element={<BarberShopDemo />} />
+        <Route
+          path="/templates/personal-trainer"
+          element={<PersonalTrainerDemo />}
+        />
+        <Route
+          path="/templates/business-operations"
+          element={<BusinessOperationsDemo />}
+        />
+        <Route path="/templates/band-dj" element={<BandDjDemo />} />
       </Routes>
     </div>
   );
