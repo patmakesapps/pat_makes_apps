@@ -113,7 +113,17 @@ a { color: inherit; text-decoration: none; }
 
 /* ───────── Hero (no-seam, full-bleed layers) ───────── */
 .hero { padding: 72px 0 48px; }
-.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Adds breathing room before "How it works" */
+.hero-actions--spaced {
+  margin-bottom: 22px;
+}
+
 .center { text-align: center; }
 .hero-actions.center { justify-content: center; }
 .nowrap { white-space: nowrap; }
@@ -232,13 +242,7 @@ a { color: inherit; text-decoration: none; }
   margin-top: 18px;
 }
 
-.how-card {
-  border: 1px solid rgba(255,255,255,0.10);
-  border-radius: 14px;
-  padding: 16px;
-  background: rgba(0,0,0,0.25);
-  backdrop-filter: blur(8px);
-}
+
 
 .how-step {
   width: 32px;
@@ -435,11 +439,13 @@ a { color: inherit; text-decoration: none; }
 
 /* Pull "How it works" upward — but keep it readable */
 .how-section {
-  margin-top: -90px;         /* less aggressive so it doesn't crash into hero-card */
+  margin-top: 0;             /* stop pulling it into the hero */
   position: relative;
   z-index: 2;
-  padding-top: 0;
+  padding-top: 28px;         /* breathing room from the hero */
 }
+
+
 
 /* Add a dark “base” behind the section so text/cards don’t sit on the busy image */
 .how-section::before {
@@ -468,9 +474,39 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid rgba(255,255,255,0.10);
   border-radius: 14px;
   padding: 16px;
-  background: rgba(11, 13, 18, 0.72);  /* darker = readable */
+  background: rgba(11, 13, 18, 0.72);
   backdrop-filter: blur(10px);
+
+  display: flex;
+  flex-direction: column;
+
+  /* less dead space but keeps buttons aligned */
+  min-height: 260px;
 }
+
+.how-footer {
+  margin-top: auto;
+}
+
+/* Make CTAs long like before */
+.how-footer .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Email row stays at bottom too */
+.how-footer .how-links {
+  margin-top: 8px;
+}
+
+
+/* Add consistent spacing above the bottom CTA area */
+.how-card a.btn,
+.how-card .how-links {
+  margin-top: 14px;
+}
+
+
 
 /* Mobile overlap reduced */
 @media (max-width: 900px) {
