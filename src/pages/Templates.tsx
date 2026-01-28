@@ -23,6 +23,10 @@ export default function Templates() {
           Band / DJ Demo
         </Link>
 
+        <Link className="btn btn-primary" to="/templates/landscaping">
+          Landscaping Demo
+        </Link>
+
       </div>
     </main>
   );

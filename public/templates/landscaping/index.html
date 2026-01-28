@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verdant Landscapes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container nav-container">
+        <div class="logo-wrap">
+          <div class="logo-mark">V</div>
+          <span class="brand-name">Verdant Landscapes</span>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#hero">Home</a>
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="hero-content container">
+          <div class="hero-copy">
+            <p class="hero-eyebrow">Professional Landscape Architecture</p>
+            <h1>Modern outdoor spaces rooted in calm, livable greenery.</h1>
+            <p>
+              From sustainable planting plans to mood-lit patios, our team crafts serene
+              environments that feel polished yet effortless. Expect meticulous planning,
+              transparent pricing, and crews that treat your property with respect.
+            </p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn primary-btn" id="cta-book">Request a Walkthrough</a>
+              <a href="#gallery" class="btn ghost-btn">See Finished Gardens</a>
+            </div>
+          </div>
+
+          <div class="hero-media">
+            <div class="hero-media-frame">
+              <img src="./photos/hero.jpg" alt="Lush landscaped backyard" loading="lazy" />
+            </div>
+            <p class="hero-media-caption">Imagery updates automatically when you drop in your hero photo.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section services">
+        <div class="container section-header">
+          <h2>Services curated for lasting curb appeal</h2>
+          <p>One partner, from design to maintenance.</p>
+        </div>
+
+        <div class="container service-grid">
+          <article class="service-card">
+            <h3>Landscape Masterplanning</h3>
+            <p>Site analysis, concept imagery, plant palettes, and phasing documents for every budget.</p>
+          </article>
+          <article class="service-card">
+            <h3>Outdoor Living Installations</h3>
+            <p>Natural stone patios, fire features, lighting, and irrigation for spaces that feel bespoke.</p>
+          </article>
+          <article class="service-card">
+            <h3>Sustainable Care & Maintenance</h3>
+            <p>Seasonal pruning, soil health checks, and eco-friendly fertilization keep landscapes thriving.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="gallery" class="section gallery">
+        <div class="container section-header">
+          <h2>Gallery</h2>
+          <p>Drop your photos into <code>/public/templates/landscaping/photos</code> as <code>pic1.jpg</code> through <code>pic5.jpg</code>.</p>
+        </div>
+
+        <div class="container gallery-grid" aria-live="polite"></div>
+        <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+          <button class="lightbox-close" aria-label="Close image">&times;</button>
+          <img src="" alt="Expanded view" class="lightbox-img" loading="lazy" />
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="container contact-grid">
+          <div>
+            <p class="hero-eyebrow">Let’s plan your project</p>
+            <h2>Start the conversation</h2>
+            <p>Phone consultations, on-site visits, and transparent proposals. Share your wish list and we’ll respond within one business day.</p>
+            <ul class="contact-list">
+              <li><strong>Phone:</strong> (555) 987-4321</li>
+              <li><strong>Email:</strong> hello@verdantlandscapes.com</li>
+              <li><strong>Service Area:</strong> Greater Metro Region + surrounding suburbs</li>
+            </ul>
+          </div>
+
+          <form class="contact-card">
+            <h3>Request a quote</h3>
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Jordan Rivera" autocomplete="name" />
+            </label>
+            <label>
+              <span>Project focus</span>
+              <input type="text" name="focus" placeholder="Garden refresh, backyard patio, etc." />
+            </label>
+            <label class="grid-two">
+              <span>Preferred date</span>
+              <input type="date" name="date" />
+            </label>
+            <label class="grid-two">
+              <span>Timing</span>
+              <input type="time" name="time" />
+            </label>
+            <label>
+              <span>Additional details</span>
+              <textarea name="details" rows="3" placeholder="Share square footage, style goals, or challenges."></textarea>
+            </label>
+            <button type="submit" class="btn primary-btn full-width">Send request (demo only)</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Verdant Landscapes | Website mockup for portfolio use.</p>
+        <p>Modern. Minimal. Thoughtfully maintained.</p>
+      </div>
+    </footer>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>

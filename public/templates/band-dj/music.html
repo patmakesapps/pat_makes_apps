@@ -1,0 +1,110 @@
+<!-- music.html (FULL FILE) -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Neon Nights Music</title>
+    <meta
+      name="description"
+      content="Neon Nights music page with featured releases, track lists, and streaming links."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar" id="top">
+        <div class="container topbar__inner">
+          <a class="brand" href="./index.html">
+            <span class="brand__dot" aria-hidden="true"></span>
+            <span class="brand__name">NEON NIGHTS</span>
+          </a>
+          <nav class="nav" aria-label="Primary">
+            <a href="./index.html">Home</a>
+            <a href="./music.html" class="active">Music</a>
+            <a href="./tour.html">Tour</a>
+            <a href="./index.html#contact">Contact</a>
+          </nav>
+          <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+        <div class="mobileNav" id="mobileNav">
+          <a href="./index.html">Home</a>
+          <a href="./music.html">Music</a>
+          <a href="./tour.html">Tour</a>
+          <a href="./index.html#contact">Contact</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="section section--accent" aria-label="Featured release hero">
+          <div class="container music-hero music-hero--tight">
+            <h1>“Luminous Echoes” — out now</h1>
+            <p>
+              Neon Nights stretches the chorus, adds harp-like synths, and keeps the feeling traffic-
+              light bright and cinematic.
+            </p>
+            <div class="hero__actions hero__actions--tight">
+              <a class="btn btn--primary" href="#">Play on Spotify</a>
+              <a class="btn btn--ghost" href="#">Queue on Apple Music</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--tight">
+          <div class="container section-head section-head--tight">
+            <h2>Track list</h2>
+            <p>Your album, EP, or mixes go here!.</p>
+          </div>
+
+          <div class="container">
+            <div class="tracklist tracklist--tight">
+              <div>
+                <p class="tracklist__number">01</p>
+                <p class="tracklist__title">Luminous Echoes</p>
+              </div>
+              <div>
+                <p class="tracklist__number">02</p>
+                <p class="tracklist__title">Sunlit Pulse</p>
+              </div>
+              <div>
+                <p class="tracklist__number">03</p>
+                <p class="tracklist__title">Daydream Frequency</p>
+              </div>
+              <div>
+                <p class="tracklist__number">04</p>
+                <p class="tracklist__title">City Neon</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--gallery section--tight">
+          <div class="container section-head section-head--row section-head--tight">
+            <div>
+              <h2>More drops</h2>
+              <p>Tap into the back catalog.</p>
+            </div>
+            <button class="btn btn--ghost btn--sm" id="loadMoreBtn" type="button">Load more</button>
+          </div>
+
+          <div class="container">
+            <div class="galleryGrid galleryGrid--tight" id="galleryGrid">
+              <noscript><p class="muted">Enable JavaScript for photos.</p></noscript>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer__inner">
+          <p>© <span id="year"></span> Neon Nights.</p>
+          <a href="./tour.html">Go to tour page</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

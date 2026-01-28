@@ -9,6 +9,7 @@ import BarberShopDemo from './pages/BarberShopDemo';
 import PersonalTrainerDemo from './pages/PersonalTrainerDemo';
 import BusinessOperationsDemo from './pages/BusinessOperationsDemo';
 import BandDjDemo from './pages/BandDjDemo';
+import LandscapingDemo from './pages/LandscapingDemo';
 import TemplateShell from './layouts/TemplateShell';
 
 export default function App() {
@@ -96,6 +97,7 @@ export default function App() {
             element={<BusinessOperationsDemo />}
           />
           <Route path="/templates/band-dj" element={<BandDjDemo />} />
+          <Route path="/templates/landscaping" element={<LandscapingDemo />} />
         </Route>
       </Routes>
     </div>

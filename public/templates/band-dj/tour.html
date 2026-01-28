@@ -1,0 +1,106 @@
+<!-- tour.html (FULL FILE) -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Neon Nights Tour</title>
+    <meta
+      name="description"
+      content="Neon Nights tour page with schedule highlights and quick RSVP links."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar" id="top">
+        <div class="container topbar__inner">
+          <a class="brand" href="./index.html">
+            <span class="brand__dot" aria-hidden="true"></span>
+            <span class="brand__name">NEON NIGHTS</span>
+          </a>
+          <nav class="nav" aria-label="Primary">
+            <a href="./index.html">Home</a>
+            <a href="./music.html">Music</a>
+            <a href="./tour.html" class="active">Tour</a>
+            <a href="./index.html#contact">Contact</a>
+          </nav>
+          <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+        <div class="mobileNav" id="mobileNav">
+          <a href="./index.html">Home</a>
+          <a href="./music.html">Music</a>
+          <a href="./tour.html">Tour</a>
+          <a href="./index.html#contact">Contact</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="section section--shows">
+          <div class="container section-head tour-head">
+            <h1>Tour diary</h1>
+            <p>Bright stages, crisp vocals, and curated fan experiences.</p>
+          </div>
+
+          <div class="container">
+            <div class="shows-grid shows-grid--tight">
+              <article class="show-card show-card--tight">
+                <div class="show-card__left">
+                  <p class="show-card__city">Los Angeles</p>
+                  <p class="show-card__venue">The Orion · Feb 14</p>
+                </div>
+                <span class="show-card__mid muted">VIP table + live stream</span>
+                <a class="btn btn--ghost btn--sm" href="#">Tickets</a>
+              </article>
+
+              <article class="show-card show-card--tight">
+                <div class="show-card__left">
+                  <p class="show-card__city">Austin</p>
+                  <p class="show-card__venue">Neon Hall · Feb 20</p>
+                </div>
+                <span class="show-card__mid muted">Record release + after party</span>
+                <a class="btn btn--ghost btn--sm" href="#">Details</a>
+              </article>
+
+              <article class="show-card show-card--tight">
+                <div class="show-card__left">
+                  <p class="show-card__city">Paris</p>
+                  <p class="show-card__venue">La Coupole · Mar 02</p>
+                </div>
+                <span class="show-card__mid muted">Streamed worldwide</span>
+                <a class="btn btn--ghost btn--sm" href="#">RSVP</a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--gallery">
+          <div class="container section-head section-head--row tour-gallery-head">
+            <div>
+              <h2>Scenes</h2>
+              <p>Tour photos, bright lights, fans everywhere.</p>
+            </div>
+            <button class="btn btn--ghost btn--sm" id="loadMoreBtn" type="button">Load more</button>
+          </div>
+
+          <div class="container">
+            <div class="galleryGrid galleryGrid--tight" id="galleryGrid">
+              <noscript><p class="muted">Enable JavaScript for photos.</p></noscript>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer__inner">
+          <p>© <span id="year"></span> Neon Nights.</p>
+          <a href="./music.html">Back to music</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
