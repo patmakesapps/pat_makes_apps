@@ -62,7 +62,7 @@ if (sectionEls.length && navAnchors.length) {
 
 // Gallery builder
 const galleryGrid = document.querySelector(".gallery-grid");
-const galleryPhotoNames = ["pic1", "pic2", "pic3", "pic4", "pic5"];
+const galleryPhotoNames = ["pic1", "pic2", "pic3", "pic4", "pic5","pic6"]
 
 const createGalleryItem = (name, index) => {
   const figure = document.createElement("figure");

@@ -91,18 +91,17 @@ main {
   color: #142a17;
   position: relative;
   padding-bottom: 6px;
+  text-decoration: none; /* ✅ remove underline */
 }
 
+.nav-links a:hover,
+.nav-links a:focus {
+  text-decoration: none; /* ✅ keep it off on hover/focus too */
+}
+
+
 .nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background: var(--yellow-soft);
-  border-radius: 999px;
-  transition: width 0.2s ease;
+  content: none; /* ✅ disables the custom underline/indicator */
 }
 
 .nav-links a:hover::after,
@@ -261,45 +260,92 @@ main {
   line-height: 1.5;
 }
 
+/* ---------------- Gallery (show FULL photos + more interesting layout) ---------------- */
+
 .gallery-grid {
   margin-top: 28px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(12, 1fr);
   gap: 16px;
 }
 
+/* base tile */
 .gallery-item {
+  grid-column: span 4; /* default: 3 across */
   border-radius: 24px;
   overflow: hidden;
   position: relative;
   border: 1px solid rgba(15, 64, 37, 0.2);
-  background: #fff;
+  background: rgba(255, 255, 255, 0.75);
   box-shadow: 0 10px 30px rgba(14, 65, 37, 0.15);
   cursor: zoom-in;
-  min-height: 220px;
+  min-height: 240px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
+/* make it feel curated: varied tile widths */
+.gallery-item.is-wide { grid-column: span 7; }
+.gallery-item.is-med { grid-column: span 5; }
+
+.gallery-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(14, 65, 37, 0.22);
+}
+
+/* ✅ show the full photo (no cropping) */
 .gallery-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
+  object-fit: contain; /* changed from cover */
+  transition: transform 0.25s ease;
+  background: rgba(255, 255, 255, 0.55);
 }
 
 .gallery-item:hover img {
-  transform: scale(1.03);
+  transform: scale(1.01);
 }
+
+/* subtle caption chip (optional if your JS adds data-caption) */
+.gallery-item .gallery-chip {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #0c2815;
+  background: rgba(253, 218, 137, 0.92);
+  border: 1px solid rgba(15, 64, 37, 0.18);
+  backdrop-filter: blur(8px);
+}
+
+/* responsive */
+@media (max-width: 992px) {
+  .gallery-item { grid-column: span 6; } /* 2 across */
+  .gallery-item.is-wide,
+  .gallery-item.is-med { grid-column: span 12; } /* feature tiles become full width */
+}
+
+@media (max-width: 560px) {
+  .gallery-item,
+  .gallery-item.is-wide,
+  .gallery-item.is-med { grid-column: span 12; } /* 1 across */
+}
+
+/* ---------------- Lightbox (clean panel + backdrop click) ---------------- */
 
 .lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(5, 9, 7, 0.8);
+  background: rgba(5, 9, 7, 0.82);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.22s ease;
+  padding: 18px;
 }
 
 .lightbox.open {
@@ -308,26 +354,36 @@ main {
 }
 
 .lightbox-img {
-  max-width: min(90vw, 900px);
-  max-height: 80vh;
+  width: min(1100px, calc(100vw - 36px));
+  height: min(80vh, 760px);
+  object-fit: contain; /* ✅ full image */
   border-radius: 24px;
-  border: 3px solid rgba(255, 255, 255, 0.4);
+  border: 3px solid rgba(255, 255, 255, 0.35);
   box-shadow: var(--shadow);
+  background: rgba(255, 255, 255, 0.92);
+  padding: 18px;
 }
 
 .lightbox-close {
   position: absolute;
-  top: 24px;
-  right: 28px;
+  top: 22px;
+  right: 22px;
   border: none;
-  background: rgba(255, 255, 255, 0.2);
-  color: #0c2815;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  color: #f7f8f2;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
   font-size: 1.4rem;
   cursor: pointer;
+  display: grid;
+  place-items: center;
 }
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
 
 .contact {
   background: #fff;
@@ -458,4 +514,13 @@ main {
   .hero-media-frame img {
     height: 320px;
   }
+}
+
+/* ✅ kill underlines on CTA buttons (they're anchors) */
+a.btn,
+a.btn:visited,
+a.btn:hover,
+a.btn:focus,
+a.btn:active {
+  text-decoration: none !important;
 }
