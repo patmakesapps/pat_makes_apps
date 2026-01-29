@@ -69,7 +69,8 @@ const createGalleryItem = (name, index) => {
   figure.className = "gallery-item";
 
   const img = document.createElement("img");
-  img.src = `./photos/${name}.jpg`;
+  img.src = `./photos/${name}.png`;
+
   img.alt = `Showcase landscape ${index + 1}`;
   img.loading = "lazy";
   img.dataset.photoName = name;
