@@ -27,6 +27,10 @@ export default function Templates() {
           Landscaping Demo
         </Link>
 
+        <Link className="btn btn-primary" to="/templates/food">
+          Food Demo
+        </Link>
+
       </div>
     </main>
   );

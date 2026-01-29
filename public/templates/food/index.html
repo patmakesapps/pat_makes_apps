@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Albertos | Fine Dining</title>
+    <meta
+      name="description"
+      content="Albertos — a fine dining experience with seasonal dishes, handcrafted cocktails, and warm hospitality."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar" data-elevate>
+      <div class="container topbar__inner">
+        <a class="brand" href="#home" aria-label="Albertos home">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span class="brand__text">
+            <span class="brand__name">Albertos</span>
+            <span class="brand__tag">Fine Dining</span>
+          </span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">
+          <span class="nav-toggle__bars" aria-hidden="true"></span>
+          <span class="sr-only">Open menu</span>
+        </button>
+
+        <nav id="nav" class="nav" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#menu">Menu</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#reservations">Reservations</a>
+          <a href="#contact">Contact</a>
+          <a class="nav__cta" href="#reservations">Book a Table</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO -->
+      <section id="home" class="hero">
+        <div class="hero__media" role="img" aria-label="Albertos fine dining ambience"></div>
+
+        <div class="container hero__content">
+          <div class="hero__card">
+            <p class="eyebrow">Seasonal • Elegant • Unforgettable</p>
+            <h1>Albertos</h1>
+            <p class="lead">
+              A modern fine-dining experience inspired by classic technique and fresh, local ingredients.
+            </p>
+
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#reservations">Reserve a Table</a>
+              <a class="btn btn--ghost" href="#menu">View Menu</a>
+            </div>
+
+            <div class="hero__meta">
+              <div class="meta-item">
+                <div class="meta-item__k">Hours</div>
+                <div class="meta-item__v">Tue–Sun • 5–10pm</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-item__k">Dress</div>
+                <div class="meta-item__v">Smart Casual</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-item__k">Location</div>
+                <div class="meta-item__v">Downtown</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRUST STRIP -->
+      <section class="strip">
+        <div class="container strip__inner">
+          <div class="strip__item">
+            <span class="strip__icon" aria-hidden="true">✦</span>
+            <span>Seasonal Tasting</span>
+          </div>
+          <div class="strip__item">
+            <span class="strip__icon" aria-hidden="true">✦</span>
+            <span>Handcrafted Cocktails</span>
+          </div>
+          <div class="strip__item">
+            <span class="strip__icon" aria-hidden="true">✦</span>
+            <span>Chef’s Table</span>
+          </div>
+          <div class="strip__item">
+            <span class="strip__icon" aria-hidden="true">✦</span>
+            <span>Private Dining</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section">
+        <div class="container grid grid--2">
+          <div class="stack">
+            <h2>Crafted with intention.</h2>
+            <p class="muted">
+              Albertos pairs warm hospitality with a refined, modern menu. Our dishes change with the seasons,
+              celebrating local farms and classic culinary technique.
+            </p>
+
+            <div class="feature-list">
+              <div class="feature">
+                <div class="feature__dot" aria-hidden="true"></div>
+                <div>
+                  <h3>Seasonal ingredients</h3>
+                  <p class="muted">Fresh produce and thoughtfully sourced proteins, updated weekly.</p>
+                </div>
+              </div>
+
+              <div class="feature">
+                <div class="feature__dot" aria-hidden="true"></div>
+                <div>
+                  <h3>Elevated classics</h3>
+                  <p class="muted">Comforting favorites with modern plating and bold flavor.</p>
+                </div>
+              </div>
+
+              <div class="feature">
+                <div class="feature__dot" aria-hidden="true"></div>
+                <div>
+                  <h3>Atmosphere</h3>
+                  <p class="muted">A candle-warm dining room built for dates, celebrations, and business dinners.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about__actions">
+              <a class="btn btn--primary" href="#reservations">Reserve</a>
+              <a class="btn btn--soft" href="#contact">Private Events</a>
+            </div>
+          </div>
+
+          <div class="about__media">
+            <div class="media-grid">
+              <figure class="media-grid__item">
+                <img src="./photos/pic1.png" alt="Plated dish at Albertos" loading="lazy" />
+              </figure>
+              <figure class="media-grid__item">
+                <img src="./photos/pic2.png" alt="Cocktails at Albertos bar" loading="lazy" />
+              </figure>
+              <figure class="media-grid__item">
+                <img src="./photos/pic3.png" alt="Dining room ambience" loading="lazy" />
+              </figure>
+              <figure class="media-grid__item">
+                <img src="./photos/pic4.png" alt="Dessert presentation" loading="lazy" />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MENU -->
+      <section id="menu" class="section section--alt">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>Signature selections</h2>
+              <p class="muted">A preview of our most-loved dishes. Ask about the seasonal tasting menu.</p>
+            </div>
+            <a class="btn btn--soft" href="#reservations">Chef’s Tasting</a>
+          </div>
+
+          <div class="menu-grid">
+            <article class="card">
+              <h3>Starters</h3>
+              <ul class="menu-list">
+                <li>
+                  <div class="menu-item">
+                    <span class="menu-item__name">Citrus Burrata</span>
+                    <span class="menu-item__dots" aria-hidden="true"></span>
+                    <span class="menu-item__price">$16</span>
+                  </div>
+                  <p class="menu-item__desc muted">Seasonal citrus, basil oil, toasted pistachio.</p>
+                </li>
+
+                <li>
+                  <div class="menu-item">
+                    <span class="menu-item__name">Truffle Arancini</span>
+                    <span class="menu-item__dots" aria-hidden="true"></span>
+                    <span class="menu-item__price">$18</span>
+                  </div>
+                  <p class="menu-item__desc muted">Crispy risotto, parmesan cream, shaved truffle.</p>
+                </li>
+
+                <li>
+                  <div class="menu-item">
+                    <span class="menu-item__name">Crudo of the Day</span>
+                    <span class="menu-item__dots" aria-hidden="true"></span>
+                    <span class="menu-item__price">$19</span>
+                  </div>
+                  <p class="menu-item__desc muted">Chef’s selection, bright vinaigrette, sea salt.</p>
+                </li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>Mains</h3>
+              <ul class="menu-list">
+                <li>
+                  <div class="menu-item">
+                    <span class="menu-item__name">Filet & Red Wine Jus</span>
+                    <span class="menu-item__dots" aria-hidden="true"></span>
+                    <span class="menu-item__price">$46</span>
+                  </div>
+                  <p class="menu-item__desc muted">Roasted mushrooms, pomme purée, herbs.</p>
+                </li>
+
+                <li>
+                  <div class="menu-item">
+                    <span class="menu-item__name">Sea Bass</span>
+                    <span class="menu-item__dots" aria-hidden="true"></span>
+                    <span class="menu-item__price">$39</span>
+                  </div>
+                  <p class="menu-item__desc muted">Brown butter, charred lemon, market greens.</p>
+                </li>
+
+                <li>
+                  <div class="menu-item">
+                    <span class="menu-item__name">Handmade Tagliatelle</span>
+                    <span class="menu-item__dots" aria-hidden="true"></span>
+                    <span class="menu-item__price">$28</span>
+                  </div>
+                  <p class="menu-item__desc muted">Slow-simmered ragu, pecorino, basil.</p>
+                </li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>Dessert & Cocktails</h3>
+              <ul class="menu-list">
+                <li>
+                  <div class="menu-item">
+                    <span class="menu-item__name">Vanilla Bean Crème Brûlée</span>
+                    <span class="menu-item__dots" aria-hidden="true"></span>
+                    <span class="menu-item__price">$14</span>
+                  </div>
+                  <p class="menu-item__desc muted">Caramelized sugar, fresh berries.</p>
+                </li>
+
+                <li>
+                  <div class="menu-item">
+                    <span class="menu-item__name">Espresso Martini</span>
+                    <span class="menu-item__dots" aria-hidden="true"></span>
+                    <span class="menu-item__price">$16</span>
+                  </div>
+                  <p class="menu-item__desc muted">Cold brew, vanilla, cacao dust.</p>
+                </li>
+
+                <li>
+                  <div class="menu-item">
+                    <span class="menu-item__name">Smoked Old Fashioned</span>
+                    <span class="menu-item__dots" aria-hidden="true"></span>
+                    <span class="menu-item__price">$18</span>
+                  </div>
+                  <p class="menu-item__desc muted">Bourbon, bitters, orange, smoke.</p>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section id="gallery" class="section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>Gallery</h2>
+              <p class="muted">A glimpse of the experience—tap to view larger.</p>
+            </div>
+            <button class="btn btn--soft" type="button" data-open-lightbox>
+              View All
+            </button>
+          </div>
+
+          <div class="gallery-grid" data-gallery>
+            <button class="gallery-tile" type="button" data-img="./photos/pic1.png" aria-label="Open photo 1">
+              <img src="./photos/pic1.png" alt="Gallery photo 1" loading="lazy" />
+            </button>
+            <button class="gallery-tile" type="button" data-img="./photos/pic2.png" aria-label="Open photo 2">
+              <img src="./photos/pic2.png" alt="Gallery photo 2" loading="lazy" />
+            </button>
+            <button class="gallery-tile" type="button" data-img="./photos/pic3.png" aria-label="Open photo 3">
+              <img src="./photos/pic3.png" alt="Gallery photo 3" loading="lazy" />
+            </button>
+            <button class="gallery-tile" type="button" data-img="./photos/pic4.png" aria-label="Open photo 4">
+              <img src="./photos/pic4.png" alt="Gallery photo 4" loading="lazy" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESERVATIONS -->
+      <section id="reservations" class="section section--alt">
+        <div class="container grid grid--2">
+          <div class="stack">
+            <h2>Reservations</h2>
+            <p class="muted">
+              Reserve your table in seconds. For parties of 8+ or private dining, send us a message below.
+            </p>
+
+            <div class="info-cards">
+              <div class="info-card">
+                <div class="info-card__k">Phone</div>
+                <div class="info-card__v">(555) 012-3456</div>
+              </div>
+              <div class="info-card">
+                <div class="info-card__k">Email</div>
+                <div class="info-card__v">reservations@albertos.com</div>
+              </div>
+              <div class="info-card">
+                <div class="info-card__k">Address</div>
+                <div class="info-card__v">123 Market Street, Downtown</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card--form">
+            <form id="reservationForm" novalidate>
+              <div class="form-grid">
+                <label class="field">
+                  <span class="field__label">Name</span>
+                  <input name="name" type="text" placeholder="Your name" autocomplete="name" required />
+                  <span class="field__error" aria-live="polite"></span>
+                </label>
+
+                <label class="field">
+                  <span class="field__label">Phone</span>
+                  <input name="phone" type="tel" placeholder="(555) 555-5555" autocomplete="tel" required />
+                  <span class="field__error" aria-live="polite"></span>
+                </label>
+
+                <label class="field">
+                  <span class="field__label">Date</span>
+                  <input name="date" type="date" required />
+                  <span class="field__error" aria-live="polite"></span>
+                </label>
+
+                <label class="field">
+                  <span class="field__label">Time</span>
+                  <input name="time" type="time" required />
+                  <span class="field__error" aria-live="polite"></span>
+                </label>
+
+                <label class="field field--full">
+                  <span class="field__label">Party size</span>
+                  <select name="party" required>
+                    <option value="" selected disabled>Select…</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                  </select>
+                  <span class="field__error" aria-live="polite"></span>
+                </label>
+
+                <label class="field field--full">
+                  <span class="field__label">Notes (optional)</span>
+                  <textarea name="notes" rows="3" placeholder="Allergies, celebrations, seating preferences…"></textarea>
+                </label>
+              </div>
+
+              <div class="form-actions">
+                <button class="btn btn--primary" type="submit">Request Reservation</button>
+                <p class="form-fine muted">
+                  This demo confirms instantly. Connect to your backend/booking provider when ready.
+                </p>
+              </div>
+
+              <div class="toast" role="status" aria-live="polite" aria-atomic="true" hidden>
+                <div class="toast__title">Reservation requested</div>
+                <div class="toast__msg">We’ll text you a confirmation shortly.</div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>Contact</h2>
+              <p class="muted">Questions, private events, or press—reach out anytime.</p>
+            </div>
+          </div>
+
+          <div class="contact-grid">
+            <div class="card">
+              <h3>Private Dining</h3>
+              <p class="muted">
+                Host birthdays, anniversaries, and business dinners with curated menus and dedicated service.
+              </p>
+              <ul class="bullets">
+                <li>Chef’s tasting options</li>
+                <li>Wine pairing upgrades</li>
+                <li>Custom seating layouts</li>
+              </ul>
+              <a class="btn btn--soft" href="#reservations">Inquire</a>
+            </div>
+
+            <div class="card">
+              <h3>Visit</h3>
+              <p class="muted">
+                123 Market Street, Downtown<br />
+                Tue–Sun • 5–10pm
+              </p>
+              <div class="pill-row">
+                <span class="pill">Valet Available</span>
+                <span class="pill">Vegetarian Options</span>
+                <span class="pill">Gluten-Free Available</span>
+              </div>
+              <a class="btn btn--soft" href="#home">Back to Top</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" data-lightbox hidden>
+      <div class="lightbox__backdrop" data-close-lightbox></div>
+      <div class="lightbox__panel" role="dialog" aria-modal="true" aria-label="Image viewer">
+        <button class="lightbox__close" type="button" data-close-lightbox aria-label="Close">✕</button>
+        <button class="lightbox__nav lightbox__nav--prev" type="button" data-prev aria-label="Previous">‹</button>
+        <img class="lightbox__img" alt="Expanded gallery image" />
+        <button class="lightbox__nav lightbox__nav--next" type="button" data-next aria-label="Next">›</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__left">
+          <div class="footer__brand">Albertos</div>
+          <div class="footer__muted muted">Fine Dining • Seasonal Menu • Downtown</div>
+        </div>
+        <div class="footer__right muted">
+          <span>© <span id="year"></span> Albertos</span>
+          <span class="dot" aria-hidden="true">•</span>
+          <a href="#reservations">Reservations</a>
+          <span class="dot" aria-hidden="true">•</span>
+          <a href="#contact">Private Dining</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
