@@ -143,16 +143,8 @@ h3 {
   gap: 12px;
   min-width: 160px;
 }
-.brand__mark {
-  width: 34px;
-  height: 34px;
-  border-radius: 12px;
-  background:
-    radial-gradient(circle at 30% 30%, rgba(255,255,255,0.25), transparent 45%),
-    linear-gradient(135deg, rgba(216,179,106,0.9), rgba(242,217,161,0.25));
-  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
-  border: 1px solid rgba(255,255,255,0.14);
-}
+
+
 .brand__text {
   display: grid;
   gap: 2px;
