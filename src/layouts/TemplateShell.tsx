@@ -1,9 +1,17 @@
 import { Outlet, useLocation } from 'react-router-dom';
 import TemplateTopbar from '../components/TemplateTopbar';
 
+const TEMPLATE_TITLE_OVERRIDES: Record<string, string> = {
+  food: 'Restaurant Template',
+};
+
 function prettifyTemplateName(pathname: string) {
-  // "/templates/barber-shop" -> "Barber Shop"
   const slug = pathname.split('/').filter(Boolean)[1] || '';
+  if (!slug) return '';
+  if (TEMPLATE_TITLE_OVERRIDES[slug]) {
+    return TEMPLATE_TITLE_OVERRIDES[slug];
+  }
+
   return slug
     .split('-')
     .filter(Boolean)

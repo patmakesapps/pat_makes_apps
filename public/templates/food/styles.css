@@ -654,6 +654,15 @@ input:focus, select:focus, textarea:focus {
   display: grid;
   place-items: center;
   padding: 16px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 200ms ease, visibility 200ms ease;
+}
+.lightbox.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 .lightbox__backdrop {
   position: absolute;
@@ -701,6 +710,10 @@ input:focus, select:focus, textarea:focus {
 }
 .lightbox__nav--prev { left: 10px; }
 .lightbox__nav--next { right: 10px; }
+
+.lightbox[hidden] {
+  display: none !important;
+}
 
 /* Footer */
 .footer {

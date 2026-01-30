@@ -130,13 +130,18 @@
     index = Math.max(0, Math.min(i, imgs.length - 1));
     lightboxImg.src = imgs[index];
     lightbox.hidden = false;
+    lightbox.classList.add("open");
     document.body.style.overflow = "hidden";
   };
 
   const closeLightbox = () => {
     if (!lightbox) return;
+    lightbox.classList.remove("open");
     lightbox.hidden = true;
     document.body.style.overflow = "";
+    if (lightboxImg) {
+      lightboxImg.src = "";
+    }
   };
 
   const step = (dir) => {
